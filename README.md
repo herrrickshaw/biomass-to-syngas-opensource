@@ -40,6 +40,18 @@ streamlit run streamlit_app.py                   # interactive app
 | `biomass_to_syngas/gas_cleanup.py` | Mass-balance tar/particulate removal | Cleaned syngas, captured tar/particulate |
 | `biomass_to_syngas/syngas_quality.py` | H2:CO ratio + LHV + downstream-use screening | Recommended use (power vs. FT/methanol feed vs. shift-first) |
 
+## Cross-checked against real gasifier vendors
+
+`docs/VENDOR_REFERENCE.md` checks this repo's gasifier-type categories
+against real, named equipment providers: Ankur Scientific (India,
+downdraft, verified installed-project figures) and Powermax
+(explicitly rice-straw-rated fixed-bed and circulating-fluidized-bed
+gasifiers) — whose own published **>=1,200 kcal/Nm3** minimum syngas
+energy spec this repo's own 100 t/day rice-straw worked example clears
+(1,364 kcal/Nm3), a real external cross-check, with the caveat about
+air- vs. oxygen-blown process differences stated honestly rather than
+glossed over.
+
 ## Related open-source work
 
 Same related-project list as the sibling repos:
