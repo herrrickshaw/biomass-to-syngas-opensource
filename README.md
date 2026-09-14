@@ -40,17 +40,24 @@ streamlit run streamlit_app.py                   # interactive app
 | `biomass_to_syngas/gas_cleanup.py` | Mass-balance tar/particulate removal | Cleaned syngas, captured tar/particulate |
 | `biomass_to_syngas/syngas_quality.py` | H2:CO ratio + LHV + downstream-use screening | Recommended use (power vs. FT/methanol feed vs. shift-first) |
 
-## Cross-checked against real gasifier vendors
+## Cross-checked against real gasifier vendors — all three technology categories
 
 `docs/VENDOR_REFERENCE.md` checks this repo's gasifier-type categories
 against real, named equipment providers: Ankur Scientific (India,
-downdraft, verified installed-project figures) and Powermax
-(explicitly rice-straw-rated fixed-bed and circulating-fluidized-bed
-gasifiers) — whose own published **>=1,200 kcal/Nm3** minimum syngas
-energy spec this repo's own 100 t/day rice-straw worked example clears
-(1,364 kcal/Nm3), a real external cross-check, with the caveat about
-air- vs. oxygen-blown process differences stated honestly rather than
-glossed over.
+downdraft, verified installed-project figures), Powermax (explicitly
+rice-straw-rated fixed-bed, circulating-fluidized-bed AND updraft
+gasifiers — a single real vendor spanning all three of `gasifier.py`'s
+technology categories), and Chanderpur Works (a second India-based
+downdraft+updraft manufacturer, rice husk explicitly named as
+feedstock). Powermax's own published **>=1,200 kcal/Nm3** minimum
+syngas energy spec is cleared by this repo's own 100 t/day rice-straw
+worked example (1,364 kcal/Nm3), and its updraft product's real
+published tar-content range independently brackets `gasifier.py`'s own
+`TYPICAL_TAR_YIELD_G_NM3["updraft"]` default. Separately, an
+independent literature figure for water-scrub + venturi-scrubber tar
+removal (97%) lands exactly on `gas_cleanup.py`'s own existing
+`tar_removal_fraction` default — a genuine corroboration, not a
+correction, found by checking rather than assumed.
 
 ## Related open-source work
 

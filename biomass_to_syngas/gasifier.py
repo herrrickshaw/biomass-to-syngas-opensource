@@ -25,6 +25,13 @@ high-temperature zone the tar must pass through), fluidized bed
 gasifier-type default) rather than predicting it from first
 principles - real tar formation depends on residence time, particle
 size, and reactor internals well beyond a conceptual elemental balance.
+
+The updraft default (50 g/Nm3) is independently corroborated by a
+second, separate literature figure found via vendor research (docs/
+VENDOR_REFERENCE.md): published tar-production ranges for updraft
+gasifiers of 30-150 g/Nm3, overlapping NREL's own 10-150 g/Nm3 range
+above from a different source entirely - two independent citations
+bracketing the same default, not one source re-quoted.
 """
 from __future__ import annotations
 

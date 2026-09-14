@@ -10,6 +10,13 @@ designed system (see e.g. the same NREL tar report cited in
 gasifier.py's docstring, and subsequent DOE/NREL syngas cleanup
 literature); particulate removal via a cyclone (coarse) followed by a
 scrubber or filter (fine) commonly achieves >95-99% overall removal.
+
+This module's own `tar_removal_fraction` default (0.97) is independently
+corroborated by a specific, mechanism-matched literature figure found
+via vendor research (docs/VENDOR_REFERENCE.md): water scrubbing alone
+removes up to ~50% of tar, and a water scrub followed by a venturi
+scrubber raises that to ~97% - landing exactly on this module's existing
+default rather than just inside the generic 90-99% range already cited.
 """
 from __future__ import annotations
 
