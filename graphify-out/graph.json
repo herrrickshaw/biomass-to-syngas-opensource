@@ -1,0 +1,2495 @@
+{
+  "input_tokens": 0,
+  "output_tokens": 0,
+  "failed_sources": [],
+  "extracted_sources": [
+    "/Users/umashankar/biomass-to-syngas-opensource/biomass_to_syngas/__init__.py",
+    "/Users/umashankar/biomass-to-syngas-opensource/biomass_to_syngas/biomass_feedstock.py",
+    "/Users/umashankar/biomass-to-syngas-opensource/biomass_to_syngas/gas_cleanup.py",
+    "/Users/umashankar/biomass-to-syngas-opensource/biomass_to_syngas/gasifier.py",
+    "/Users/umashankar/biomass-to-syngas-opensource/biomass_to_syngas/properties.py",
+    "/Users/umashankar/biomass-to-syngas-opensource/biomass_to_syngas/syngas_quality.py",
+    "/Users/umashankar/biomass-to-syngas-opensource/examples/full_chain_worked_example.py",
+    "/Users/umashankar/biomass-to-syngas-opensource/pyproject.toml",
+    "/Users/umashankar/biomass-to-syngas-opensource/streamlit_app.py",
+    "/Users/umashankar/biomass-to-syngas-opensource/tests/test_biomass_feedstock.py",
+    "/Users/umashankar/biomass-to-syngas-opensource/tests/test_gas_cleanup.py",
+    "/Users/umashankar/biomass-to-syngas-opensource/tests/test_gasifier.py",
+    "/Users/umashankar/biomass-to-syngas-opensource/tests/test_syngas_quality.py",
+    "/Users/umashankar/biomass-to-syngas-opensource/README.md",
+    "/Users/umashankar/biomass-to-syngas-opensource/docs/METHODOLOGY.md",
+    "/Users/umashankar/biomass-to-syngas-opensource/docs/VALIDATION.md"
+  ],
+  "nodes": [
+    {
+      "id": "biomass_to_syngas_init",
+      "label": "__init__.py",
+      "file_type": "code",
+      "source_file": "biomass_to_syngas/__init__.py",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "biomass_to_syngas_biomass_feedstock",
+      "label": "biomass_feedstock.py",
+      "file_type": "code",
+      "source_file": "biomass_to_syngas/biomass_feedstock.py",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "biomass_to_syngas_biomass_feedstock_biomassanalysis",
+      "label": "BiomassAnalysis",
+      "file_type": "code",
+      "source_file": "biomass_to_syngas/biomass_feedstock.py",
+      "source_location": "L38",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "biomass_to_syngas_biomass_feedstock_biomassanalysis_post_init",
+      "label": ".__post_init__()",
+      "file_type": "code",
+      "source_file": "biomass_to_syngas/biomass_feedstock.py",
+      "source_location": "L48",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "biomass_to_syngas_biomass_feedstock_biomassanalysis_hhv_mj_kg",
+      "label": ".hhv_MJ_kg()",
+      "file_type": "code",
+      "source_file": "biomass_to_syngas/biomass_feedstock.py",
+      "source_location": "L53",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "biomass_to_syngas_biomass_feedstock_biomassanalysis_lhv_mj_kg",
+      "label": ".lhv_MJ_kg()",
+      "file_type": "code",
+      "source_file": "biomass_to_syngas/biomass_feedstock.py",
+      "source_location": "L66",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "biomass_to_syngas_biomass_feedstock_rationale_1",
+      "label": "Biomass feedstock characterization: ultimate analysis + a solid-fuel-specific…",
+      "file_type": "rationale",
+      "source_file": "biomass_to_syngas/biomass_feedstock.py",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "biomass_to_syngas_biomass_feedstock_rationale_39",
+      "label": "As-received ultimate analysis, mass fractions summing to 1.0.",
+      "file_type": "rationale",
+      "source_file": "biomass_to_syngas/biomass_feedstock.py",
+      "source_location": "L39",
+      "_origin": "ast"
+    },
+    {
+      "id": "biomass_to_syngas_biomass_feedstock_rationale_54",
+      "label": "Channiwala & Parikh (2002) unified correlation - see module docstring. Mass…",
+      "file_type": "rationale",
+      "source_file": "biomass_to_syngas/biomass_feedstock.py",
+      "source_location": "L54",
+      "_origin": "ast"
+    },
+    {
+      "id": "biomass_to_syngas_biomass_feedstock_rationale_67",
+      "label": "LHV = HHV minus the latent heat of the water formed from fuel hydrogen AND the…",
+      "file_type": "rationale",
+      "source_file": "biomass_to_syngas/biomass_feedstock.py",
+      "source_location": "L67",
+      "_origin": "ast"
+    },
+    {
+      "id": "biomass_to_syngas_gas_cleanup",
+      "label": "gas_cleanup.py",
+      "file_type": "code",
+      "source_file": "biomass_to_syngas/gas_cleanup.py",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "biomass_to_syngas_gas_cleanup_cleanupresult",
+      "label": "CleanupResult",
+      "file_type": "code",
+      "source_file": "biomass_to_syngas/gas_cleanup.py",
+      "source_location": "L20",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "biomass_to_syngas_gas_cleanup_clean_syngas",
+      "label": "clean_syngas()",
+      "file_type": "code",
+      "source_file": "biomass_to_syngas/gas_cleanup.py",
+      "source_location": "L29",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "biomass_to_syngas_gas_cleanup_rationale_1",
+      "label": "Syngas cleanup: tar and particulate removal ahead of any downstream use…",
+      "file_type": "rationale",
+      "source_file": "biomass_to_syngas/gas_cleanup.py",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "biomass_to_syngas_gas_cleanup_rationale_35",
+      "label": "Mass-balance tar/particulate removal. tar_mass_flow_kg_s and…",
+      "file_type": "rationale",
+      "source_file": "biomass_to_syngas/gas_cleanup.py",
+      "source_location": "L35",
+      "_origin": "ast"
+    },
+    {
+      "id": "biomass_to_syngas_gasifier",
+      "label": "gasifier.py",
+      "file_type": "code",
+      "source_file": "biomass_to_syngas/gasifier.py",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "biomass_to_syngas_gasifier_gasifierresult",
+      "label": "GasifierResult",
+      "file_type": "code",
+      "source_file": "biomass_to_syngas/gasifier.py",
+      "source_location": "L55",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "biomass_to_syngas_gasifier_wgs_equilibrium_k",
+      "label": "_wgs_equilibrium_K()",
+      "file_type": "code",
+      "source_file": "biomass_to_syngas/gasifier.py",
+      "source_location": "L67",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "biomass_to_syngas_gasifier_gasify_biomass",
+      "label": "gasify_biomass()",
+      "file_type": "code",
+      "source_file": "biomass_to_syngas/gasifier.py",
+      "source_location": "L71",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "biomass_to_syngas_gasifier_gasify_biomass_residual",
+      "label": "residual()",
+      "file_type": "code",
+      "source_file": "biomass_to_syngas/gasifier.py",
+      "source_location": "L126",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "biomass_to_syngas_gasifier_species_mw",
+      "label": "_species_mw()",
+      "file_type": "code",
+      "source_file": "biomass_to_syngas/gasifier.py",
+      "source_location": "L174",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "biomass_to_syngas_gasifier_rationale_1",
+      "label": "Biomass gasification: elemental mass balance + water-gas-shift equilibrium…",
+      "file_type": "rationale",
+      "source_file": "biomass_to_syngas/gasifier.py",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "biomass_to_syngas_gasifier_rationale_80",
+      "label": "Elemental balance + WGS-equilibrium quench, same structure as the coal-to-urea…",
+      "file_type": "rationale",
+      "source_file": "biomass_to_syngas/gasifier.py",
+      "source_location": "L80",
+      "_origin": "ast"
+    },
+    {
+      "id": "biomass_to_syngas_properties",
+      "label": "properties.py",
+      "file_type": "code",
+      "source_file": "biomass_to_syngas/properties.py",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "biomass_to_syngas_properties_gasmixture",
+      "label": "GasMixture",
+      "file_type": "code",
+      "source_file": "biomass_to_syngas/properties.py",
+      "source_location": "L19",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "biomass_to_syngas_properties_gasmixture_post_init",
+      "label": ".__post_init__()",
+      "file_type": "code",
+      "source_file": "biomass_to_syngas/properties.py",
+      "source_location": "L31",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "biomass_to_syngas_properties_gasmixture_heos_string",
+      "label": "._heos_string()",
+      "file_type": "code",
+      "source_file": "biomass_to_syngas/properties.py",
+      "source_location": "L36",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "biomass_to_syngas_properties_gasmixture_molecular_weight",
+      "label": ".molecular_weight()",
+      "file_type": "code",
+      "source_file": "biomass_to_syngas/properties.py",
+      "source_location": "L40",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "biomass_to_syngas_properties_gasmixture_prop",
+      "label": ".prop()",
+      "file_type": "code",
+      "source_file": "biomass_to_syngas/properties.py",
+      "source_location": "L44",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "biomass_to_syngas_properties_gasmixture_cp_over_cv",
+      "label": ".cp_over_cv()",
+      "file_type": "code",
+      "source_file": "biomass_to_syngas/properties.py",
+      "source_location": "L48",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "biomass_to_syngas_properties_gasmixture_compressibility",
+      "label": ".compressibility()",
+      "file_type": "code",
+      "source_file": "biomass_to_syngas/properties.py",
+      "source_location": "L51",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "biomass_to_syngas_properties_gasmixture_density",
+      "label": ".density()",
+      "file_type": "code",
+      "source_file": "biomass_to_syngas/properties.py",
+      "source_location": "L54",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "biomass_to_syngas_properties_gasmixture_enthalpy",
+      "label": ".enthalpy()",
+      "file_type": "code",
+      "source_file": "biomass_to_syngas/properties.py",
+      "source_location": "L57",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "biomass_to_syngas_properties_gasmixture_viscosity",
+      "label": ".viscosity()",
+      "file_type": "code",
+      "source_file": "biomass_to_syngas/properties.py",
+      "source_location": "L60",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "biomass_to_syngas_properties_gasmixture_thermal_conductivity",
+      "label": ".thermal_conductivity()",
+      "file_type": "code",
+      "source_file": "biomass_to_syngas/properties.py",
+      "source_location": "L63",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "biomass_to_syngas_properties_gasmixture_specific_heat",
+      "label": ".specific_heat()",
+      "file_type": "code",
+      "source_file": "biomass_to_syngas/properties.py",
+      "source_location": "L66",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "biomass_to_syngas_properties_pure_fluid_prop",
+      "label": "pure_fluid_prop()",
+      "file_type": "code",
+      "source_file": "biomass_to_syngas/properties.py",
+      "source_location": "L70",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "biomass_to_syngas_properties_rationale_1",
+      "label": "Thermophysical property helpers built on CoolProp. Same pattern as the sibling…",
+      "file_type": "rationale",
+      "source_file": "biomass_to_syngas/properties.py",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "biomass_to_syngas_properties_rationale_20",
+      "label": "A CoolProp HEOS mixture, keyed by CoolProp fluid names. Example ------- >>>…",
+      "file_type": "rationale",
+      "source_file": "biomass_to_syngas/properties.py",
+      "source_location": "L20",
+      "_origin": "ast"
+    },
+    {
+      "id": "biomass_to_syngas_properties_rationale_45",
+      "label": "Generic CoolProp state lookup at (T [K], P [Pa]) for the mixture.",
+      "file_type": "rationale",
+      "source_file": "biomass_to_syngas/properties.py",
+      "source_location": "L45",
+      "_origin": "ast"
+    },
+    {
+      "id": "biomass_to_syngas_properties_rationale_71",
+      "label": "Thin wrapper for CP.PropsSI on a pure fluid, keyword state pairs. e.g.…",
+      "file_type": "rationale",
+      "source_file": "biomass_to_syngas/properties.py",
+      "source_location": "L71",
+      "_origin": "ast"
+    },
+    {
+      "id": "biomass_to_syngas_syngas_quality",
+      "label": "syngas_quality.py",
+      "file_type": "code",
+      "source_file": "biomass_to_syngas/syngas_quality.py",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "biomass_to_syngas_syngas_quality_syngasqualityresult",
+      "label": "SyngasQualityResult",
+      "file_type": "code",
+      "source_file": "biomass_to_syngas/syngas_quality.py",
+      "source_location": "L24",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "biomass_to_syngas_syngas_quality_evaluate_syngas_quality",
+      "label": "evaluate_syngas_quality()",
+      "file_type": "code",
+      "source_file": "biomass_to_syngas/syngas_quality.py",
+      "source_location": "L32",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "biomass_to_syngas_syngas_quality_rationale_1",
+      "label": "Syngas quality metrics and downstream-use screening. H2:CO molar ratio is the…",
+      "file_type": "rationale",
+      "source_file": "biomass_to_syngas/syngas_quality.py",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "biomass_to_syngas_syngas_quality_rationale_33",
+      "label": "composition_mole_frac must include at least \"Hydrogen\" and \"CarbonMonoxide\"…",
+      "file_type": "rationale",
+      "source_file": "biomass_to_syngas/syngas_quality.py",
+      "source_location": "L33",
+      "_origin": "ast"
+    },
+    {
+      "id": "examples_full_chain_worked_example",
+      "label": "full_chain_worked_example.py",
+      "file_type": "code",
+      "source_file": "examples/full_chain_worked_example.py",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "examples_full_chain_worked_example_rationale_1",
+      "label": "End-to-end worked example: rice/paddy straw -> syngas -> cleanup -> quality…",
+      "file_type": "rationale",
+      "source_file": "examples/full_chain_worked_example.py",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "pkg_biomass_to_syngas_opensource",
+      "label": "biomass-to-syngas-opensource",
+      "file_type": "code",
+      "type": "package",
+      "ecosystem": "python",
+      "source_file": "pyproject.toml",
+      "source_location": "L1",
+      "version": "0.1.0",
+      "_origin": "ast"
+    },
+    {
+      "id": "streamlit_app",
+      "label": "streamlit_app.py",
+      "file_type": "code",
+      "source_file": "streamlit_app.py",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "streamlit_app_rationale_1",
+      "label": "Interactive biomass gasification to syngas conceptual sizing tool. Run with:…",
+      "file_type": "rationale",
+      "source_file": "streamlit_app.py",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "tests_test_biomass_feedstock",
+      "label": "test_biomass_feedstock.py",
+      "file_type": "code",
+      "source_file": "tests/test_biomass_feedstock.py",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "tests_test_biomass_feedstock_test_biomass_analysis_rejects_fractions_not_summing_to_one",
+      "label": "test_biomass_analysis_rejects_fractions_not_summing_to_one()",
+      "file_type": "code",
+      "source_file": "tests/test_biomass_feedstock.py",
+      "source_location": "L6",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "tests_test_biomass_feedstock_test_hhv_in_plausible_published_range",
+      "label": "test_hhv_in_plausible_published_range()",
+      "file_type": "code",
+      "source_file": "tests/test_biomass_feedstock.py",
+      "source_location": "L11",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "tests_test_biomass_feedstock_test_lhv_less_than_hhv",
+      "label": "test_lhv_less_than_hhv()",
+      "file_type": "code",
+      "source_file": "tests/test_biomass_feedstock.py",
+      "source_location": "L19",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "tests_test_biomass_feedstock_test_higher_moisture_widens_hhv_lhv_gap",
+      "label": "test_higher_moisture_widens_hhv_lhv_gap()",
+      "file_type": "code",
+      "source_file": "tests/test_biomass_feedstock.py",
+      "source_location": "L24",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "tests_test_gas_cleanup",
+      "label": "test_gas_cleanup.py",
+      "file_type": "code",
+      "source_file": "tests/test_gas_cleanup.py",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "tests_test_gas_cleanup_test_clean_syngas_mass_balance_closes",
+      "label": "test_clean_syngas_mass_balance_closes()",
+      "file_type": "code",
+      "source_file": "tests/test_gas_cleanup.py",
+      "source_location": "L6",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "tests_test_gas_cleanup_test_clean_syngas_higher_removal_fraction_leaves_less_behind",
+      "label": "test_clean_syngas_higher_removal_fraction_leaves_less_behind()",
+      "file_type": "code",
+      "source_file": "tests/test_gas_cleanup.py",
+      "source_location": "L13",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "tests_test_gas_cleanup_test_clean_syngas_rejects_invalid_fraction",
+      "label": "test_clean_syngas_rejects_invalid_fraction()",
+      "file_type": "code",
+      "source_file": "tests/test_gas_cleanup.py",
+      "source_location": "L20",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "tests_test_gasifier",
+      "label": "test_gasifier.py",
+      "file_type": "code",
+      "source_file": "tests/test_gasifier.py",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "tests_test_gasifier_test_gasify_biomass_mass_and_mole_balance_closes",
+      "label": "test_gasify_biomass_mass_and_mole_balance_closes()",
+      "file_type": "code",
+      "source_file": "tests/test_gasifier.py",
+      "source_location": "L7",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "tests_test_gasifier_test_gasify_biomass_cold_gas_efficiency_in_published_range",
+      "label": "test_gasify_biomass_cold_gas_efficiency_in_published_range()",
+      "file_type": "code",
+      "source_file": "tests/test_gasifier.py",
+      "source_location": "L17",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "tests_test_gasifier_test_gasify_biomass_rejects_unknown_gasifier_type",
+      "label": "test_gasify_biomass_rejects_unknown_gasifier_type()",
+      "file_type": "code",
+      "source_file": "tests/test_gasifier.py",
+      "source_location": "L25",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "tests_test_gasifier_test_gasify_biomass_tar_yield_matches_gasifier_type_ordering",
+      "label": "test_gasify_biomass_tar_yield_matches_gasifier_type_ordering()",
+      "file_type": "code",
+      "source_file": "tests/test_gasifier.py",
+      "source_location": "L30",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "tests_test_gasifier_test_gasify_biomass_rejects_invalid_carbon_conversion",
+      "label": "test_gasify_biomass_rejects_invalid_carbon_conversion()",
+      "file_type": "code",
+      "source_file": "tests/test_gasifier.py",
+      "source_location": "L39",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "tests_test_gasifier_test_gasify_biomass_higher_o2_ratio_lowers_cold_gas_efficiency",
+      "label": "test_gasify_biomass_higher_o2_ratio_lowers_cold_gas_efficiency()",
+      "file_type": "code",
+      "source_file": "tests/test_gasifier.py",
+      "source_location": "L44",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "tests_test_syngas_quality",
+      "label": "test_syngas_quality.py",
+      "file_type": "code",
+      "source_file": "tests/test_syngas_quality.py",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "tests_test_syngas_quality_test_evaluate_syngas_quality_rejects_zero_co",
+      "label": "test_evaluate_syngas_quality_rejects_zero_co()",
+      "file_type": "code",
+      "source_file": "tests/test_syngas_quality.py",
+      "source_location": "L6",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "tests_test_syngas_quality_test_evaluate_syngas_quality_ft_ratio_recommends_ft_methanol",
+      "label": "test_evaluate_syngas_quality_ft_ratio_recommends_ft_methanol()",
+      "file_type": "code",
+      "source_file": "tests/test_syngas_quality.py",
+      "source_location": "L11",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "tests_test_syngas_quality_test_evaluate_syngas_quality_co_rich_recommends_shift",
+      "label": "test_evaluate_syngas_quality_co_rich_recommends_shift()",
+      "file_type": "code",
+      "source_file": "tests/test_syngas_quality.py",
+      "source_location": "L17",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "tests_test_syngas_quality_test_evaluate_syngas_quality_high_inert_content_recommends_power_only",
+      "label": "test_evaluate_syngas_quality_high_inert_content_recommends_power_only()",
+      "file_type": "code",
+      "source_file": "tests/test_syngas_quality.py",
+      "source_location": "L23",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "tests_test_syngas_quality_test_evaluate_syngas_quality_lhv_positive",
+      "label": "test_evaluate_syngas_quality_lhv_positive()",
+      "file_type": "code",
+      "source_file": "tests/test_syngas_quality.py",
+      "source_location": "L29",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "readme",
+      "label": "README.md",
+      "file_type": "document",
+      "node_kind": "page",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "readme_biomass_to_syngas_opensource",
+      "label": "biomass-to-syngas-opensource",
+      "file_type": "document",
+      "node_kind": "heading",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "readme_quick_start",
+      "label": "Quick start",
+      "file_type": "document",
+      "node_kind": "heading",
+      "source_file": "README.md",
+      "source_location": "L24",
+      "_origin": "ast"
+    },
+    {
+      "id": "readme_modules",
+      "label": "Modules",
+      "file_type": "document",
+      "node_kind": "heading",
+      "source_file": "README.md",
+      "source_location": "L34",
+      "_origin": "ast"
+    },
+    {
+      "id": "readme_related_open_source_work",
+      "label": "Related open-source work",
+      "file_type": "document",
+      "node_kind": "heading",
+      "source_file": "README.md",
+      "source_location": "L43",
+      "_origin": "ast"
+    },
+    {
+      "id": "readme_disclaimer",
+      "label": "Disclaimer",
+      "file_type": "document",
+      "node_kind": "heading",
+      "source_file": "README.md",
+      "source_location": "L53",
+      "_origin": "ast"
+    },
+    {
+      "id": "docs_methodology",
+      "label": "METHODOLOGY.md",
+      "file_type": "document",
+      "node_kind": "page",
+      "source_file": "docs/METHODOLOGY.md",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "docs_methodology_methodology",
+      "label": "Methodology",
+      "file_type": "document",
+      "node_kind": "heading",
+      "source_file": "docs/METHODOLOGY.md",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "docs_methodology_feedstock_characterization_biomass_feedstock_py",
+      "label": "Feedstock characterization (`biomass_feedstock.py`)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "source_file": "docs/METHODOLOGY.md",
+      "source_location": "L3",
+      "_origin": "ast"
+    },
+    {
+      "id": "docs_methodology_gasifier_gasifier_py",
+      "label": "Gasifier (`gasifier.py`)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "source_file": "docs/METHODOLOGY.md",
+      "source_location": "L15",
+      "_origin": "ast"
+    },
+    {
+      "id": "docs_methodology_gas_cleanup_gas_cleanup_py",
+      "label": "Gas cleanup (`gas_cleanup.py`)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "source_file": "docs/METHODOLOGY.md",
+      "source_location": "L26",
+      "_origin": "ast"
+    },
+    {
+      "id": "docs_methodology_syngas_quality_syngas_quality_py",
+      "label": "Syngas quality (`syngas_quality.py`)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "source_file": "docs/METHODOLOGY.md",
+      "source_location": "L32",
+      "_origin": "ast"
+    },
+    {
+      "id": "docs_validation",
+      "label": "VALIDATION.md",
+      "file_type": "document",
+      "node_kind": "page",
+      "source_file": "docs/VALIDATION.md",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "docs_validation_external_validation",
+      "label": "External validation",
+      "file_type": "document",
+      "node_kind": "heading",
+      "source_file": "docs/VALIDATION.md",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "docs_validation_real_world_motivation_and_public_source",
+      "label": "Real-world motivation and public source",
+      "file_type": "document",
+      "node_kind": "heading",
+      "source_file": "docs/VALIDATION.md",
+      "source_location": "L3",
+      "_origin": "ast"
+    },
+    {
+      "id": "docs_validation_feedstock_hhv_matches_published_ranges",
+      "label": "Feedstock HHV — matches published ranges",
+      "file_type": "document",
+      "node_kind": "heading",
+      "source_file": "docs/VALIDATION.md",
+      "source_location": "L26",
+      "_origin": "ast"
+    },
+    {
+      "id": "docs_validation_full_chain_worked_example_a_real_scale_up_finding_and_a_units_bug_caught_before_shipping",
+      "label": "Full-chain worked example — a real scale-up finding, and a units bug caught before shipping",
+      "file_type": "document",
+      "node_kind": "heading",
+      "source_file": "docs/VALIDATION.md",
+      "source_location": "L35",
+      "_origin": "ast"
+    },
+    {
+      "id": "docs_validation_what_was_deliberately_not_modeled_in_this_first_pass",
+      "label": "What was deliberately not modeled in this first pass",
+      "file_type": "document",
+      "node_kind": "heading",
+      "source_file": "docs/VALIDATION.md",
+      "source_location": "L53",
+      "_origin": "ast"
+    }
+  ],
+  "links": [
+    {
+      "source": "biomass_to_syngas_biomass_feedstock",
+      "target": "dataclasses",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "biomass_to_syngas/biomass_feedstock.py",
+      "source_location": "L34",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "biomass_to_syngas_biomass_feedstock",
+      "target": "biomass_to_syngas_biomass_feedstock_biomassanalysis",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "biomass_to_syngas/biomass_feedstock.py",
+      "source_location": "L38",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "biomass_to_syngas_biomass_feedstock_biomassanalysis",
+      "target": "biomass_to_syngas_biomass_feedstock_biomassanalysis_post_init",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "biomass_to_syngas/biomass_feedstock.py",
+      "source_location": "L48",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "biomass_to_syngas_biomass_feedstock_biomassanalysis",
+      "target": "biomass_to_syngas_biomass_feedstock_biomassanalysis_hhv_mj_kg",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "biomass_to_syngas/biomass_feedstock.py",
+      "source_location": "L53",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "biomass_to_syngas_biomass_feedstock_biomassanalysis",
+      "target": "biomass_to_syngas_biomass_feedstock_biomassanalysis_lhv_mj_kg",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "biomass_to_syngas/biomass_feedstock.py",
+      "source_location": "L66",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "biomass_to_syngas_biomass_feedstock_biomassanalysis_lhv_mj_kg",
+      "target": "biomass_to_syngas_biomass_feedstock_biomassanalysis_hhv_mj_kg",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "biomass_to_syngas/biomass_feedstock.py",
+      "source_location": "L73",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "biomass_to_syngas_biomass_feedstock_rationale_1",
+      "target": "biomass_to_syngas_biomass_feedstock",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "biomass_to_syngas/biomass_feedstock.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "biomass_to_syngas_biomass_feedstock_rationale_39",
+      "target": "biomass_to_syngas_biomass_feedstock_biomassanalysis",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "biomass_to_syngas/biomass_feedstock.py",
+      "source_location": "L39",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "biomass_to_syngas_biomass_feedstock_rationale_54",
+      "target": "biomass_to_syngas_biomass_feedstock_biomassanalysis_hhv_mj_kg",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "biomass_to_syngas/biomass_feedstock.py",
+      "source_location": "L54",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "biomass_to_syngas_biomass_feedstock_rationale_67",
+      "target": "biomass_to_syngas_biomass_feedstock_biomassanalysis_lhv_mj_kg",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "biomass_to_syngas/biomass_feedstock.py",
+      "source_location": "L67",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "biomass_to_syngas_gas_cleanup",
+      "target": "dataclasses",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "biomass_to_syngas/gas_cleanup.py",
+      "source_location": "L16",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "biomass_to_syngas_gas_cleanup",
+      "target": "biomass_to_syngas_gas_cleanup_cleanupresult",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "biomass_to_syngas/gas_cleanup.py",
+      "source_location": "L20",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "biomass_to_syngas_gas_cleanup",
+      "target": "biomass_to_syngas_gas_cleanup_clean_syngas",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "biomass_to_syngas/gas_cleanup.py",
+      "source_location": "L29",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "biomass_to_syngas_gas_cleanup_clean_syngas",
+      "target": "biomass_to_syngas_gas_cleanup_cleanupresult",
+      "relation": "references",
+      "context": "return_type",
+      "confidence": "EXTRACTED",
+      "source_file": "biomass_to_syngas/gas_cleanup.py",
+      "source_location": "L29",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "biomass_to_syngas_gas_cleanup_clean_syngas",
+      "target": "biomass_to_syngas_gas_cleanup_cleanupresult",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "biomass_to_syngas/gas_cleanup.py",
+      "source_location": "L50",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "biomass_to_syngas_gas_cleanup_rationale_1",
+      "target": "biomass_to_syngas_gas_cleanup",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "biomass_to_syngas/gas_cleanup.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "biomass_to_syngas_gas_cleanup_rationale_35",
+      "target": "biomass_to_syngas_gas_cleanup_clean_syngas",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "biomass_to_syngas/gas_cleanup.py",
+      "source_location": "L35",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "biomass_to_syngas_gasifier",
+      "target": "math",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "biomass_to_syngas/gasifier.py",
+      "source_location": "L31",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "biomass_to_syngas_gasifier",
+      "target": "dataclasses",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "biomass_to_syngas/gasifier.py",
+      "source_location": "L32",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "biomass_to_syngas_gasifier",
+      "target": "scipy_optimize",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "biomass_to_syngas/gasifier.py",
+      "source_location": "L34",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "biomass_to_syngas_gasifier",
+      "target": "biomass_to_syngas_biomass_feedstock",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "biomass_to_syngas/gasifier.py",
+      "source_location": "L36",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "biomass_to_syngas_gasifier",
+      "target": "biomass_to_syngas_gasifier_gasifierresult",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "biomass_to_syngas/gasifier.py",
+      "source_location": "L55",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "biomass_to_syngas_gasifier",
+      "target": "biomass_to_syngas_gasifier_wgs_equilibrium_k",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "biomass_to_syngas/gasifier.py",
+      "source_location": "L67",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "biomass_to_syngas_gasifier",
+      "target": "biomass_to_syngas_gasifier_gasify_biomass",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "biomass_to_syngas/gasifier.py",
+      "source_location": "L71",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "biomass_to_syngas_gasifier_gasify_biomass",
+      "target": "biomass_to_syngas_biomass_feedstock_biomassanalysis",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "biomass_to_syngas/gasifier.py",
+      "source_location": "L71",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "biomass_to_syngas_gasifier_gasify_biomass",
+      "target": "biomass_to_syngas_gasifier_gasifierresult",
+      "relation": "references",
+      "context": "return_type",
+      "confidence": "EXTRACTED",
+      "source_file": "biomass_to_syngas/gasifier.py",
+      "source_location": "L71",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "biomass_to_syngas_gasifier_gasify_biomass",
+      "target": "biomass_to_syngas_gasifier_gasify_biomass_residual",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "biomass_to_syngas/gasifier.py",
+      "source_location": "L126",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "biomass_to_syngas_gasifier",
+      "target": "biomass_to_syngas_gasifier_species_mw",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "biomass_to_syngas/gasifier.py",
+      "source_location": "L174",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "biomass_to_syngas_gasifier_gasify_biomass",
+      "target": "biomass_to_syngas_gasifier_wgs_equilibrium_k",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "biomass_to_syngas/gasifier.py",
+      "source_location": "L123",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "biomass_to_syngas_gasifier_gasify_biomass",
+      "target": "biomass_to_syngas_gasifier_gasify_biomass_residual",
+      "relation": "indirect_call",
+      "context": "argument",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "biomass_to_syngas/gasifier.py",
+      "source_location": "L139",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "biomass_to_syngas_gasifier_gasify_biomass",
+      "target": "biomass_to_syngas_gasifier_species_mw",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "biomass_to_syngas/gasifier.py",
+      "source_location": "L154",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "biomass_to_syngas_gasifier_gasify_biomass",
+      "target": "biomass_to_syngas_gasifier_gasifierresult",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "biomass_to_syngas/gasifier.py",
+      "source_location": "L161",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "biomass_to_syngas_gasifier_rationale_1",
+      "target": "biomass_to_syngas_gasifier",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "biomass_to_syngas/gasifier.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "biomass_to_syngas_gasifier_rationale_80",
+      "target": "biomass_to_syngas_gasifier_gasify_biomass",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "biomass_to_syngas/gasifier.py",
+      "source_location": "L80",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "biomass_to_syngas_properties",
+      "target": "dataclasses",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "biomass_to_syngas/properties.py",
+      "source_location": "L11",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "biomass_to_syngas_properties",
+      "target": "coolprop_coolprop",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "biomass_to_syngas/properties.py",
+      "source_location": "L13",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "biomass_to_syngas_properties",
+      "target": "biomass_to_syngas_properties_gasmixture",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "biomass_to_syngas/properties.py",
+      "source_location": "L19",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "biomass_to_syngas_properties_gasmixture",
+      "target": "biomass_to_syngas_properties_gasmixture_post_init",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "biomass_to_syngas/properties.py",
+      "source_location": "L31",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "biomass_to_syngas_properties_gasmixture",
+      "target": "biomass_to_syngas_properties_gasmixture_heos_string",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "biomass_to_syngas/properties.py",
+      "source_location": "L36",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "biomass_to_syngas_properties_gasmixture",
+      "target": "biomass_to_syngas_properties_gasmixture_molecular_weight",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "biomass_to_syngas/properties.py",
+      "source_location": "L40",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "biomass_to_syngas_properties_gasmixture",
+      "target": "biomass_to_syngas_properties_gasmixture_prop",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "biomass_to_syngas/properties.py",
+      "source_location": "L44",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "biomass_to_syngas_properties_gasmixture",
+      "target": "biomass_to_syngas_properties_gasmixture_cp_over_cv",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "biomass_to_syngas/properties.py",
+      "source_location": "L48",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "biomass_to_syngas_properties_gasmixture",
+      "target": "biomass_to_syngas_properties_gasmixture_compressibility",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "biomass_to_syngas/properties.py",
+      "source_location": "L51",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "biomass_to_syngas_properties_gasmixture",
+      "target": "biomass_to_syngas_properties_gasmixture_density",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "biomass_to_syngas/properties.py",
+      "source_location": "L54",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "biomass_to_syngas_properties_gasmixture",
+      "target": "biomass_to_syngas_properties_gasmixture_enthalpy",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "biomass_to_syngas/properties.py",
+      "source_location": "L57",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "biomass_to_syngas_properties_gasmixture",
+      "target": "biomass_to_syngas_properties_gasmixture_viscosity",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "biomass_to_syngas/properties.py",
+      "source_location": "L60",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "biomass_to_syngas_properties_gasmixture",
+      "target": "biomass_to_syngas_properties_gasmixture_thermal_conductivity",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "biomass_to_syngas/properties.py",
+      "source_location": "L63",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "biomass_to_syngas_properties_gasmixture",
+      "target": "biomass_to_syngas_properties_gasmixture_specific_heat",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "biomass_to_syngas/properties.py",
+      "source_location": "L66",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "biomass_to_syngas_properties",
+      "target": "biomass_to_syngas_properties_pure_fluid_prop",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "biomass_to_syngas/properties.py",
+      "source_location": "L70",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "biomass_to_syngas_properties_gasmixture_molecular_weight",
+      "target": "biomass_to_syngas_properties_gasmixture_heos_string",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "biomass_to_syngas/properties.py",
+      "source_location": "L42",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "biomass_to_syngas_properties_gasmixture_prop",
+      "target": "biomass_to_syngas_properties_gasmixture_heos_string",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "biomass_to_syngas/properties.py",
+      "source_location": "L46",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "biomass_to_syngas_properties_gasmixture_cp_over_cv",
+      "target": "biomass_to_syngas_properties_gasmixture_prop",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "biomass_to_syngas/properties.py",
+      "source_location": "L49",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "biomass_to_syngas_properties_gasmixture_compressibility",
+      "target": "biomass_to_syngas_properties_gasmixture_prop",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "biomass_to_syngas/properties.py",
+      "source_location": "L52",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "biomass_to_syngas_properties_gasmixture_density",
+      "target": "biomass_to_syngas_properties_gasmixture_prop",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "biomass_to_syngas/properties.py",
+      "source_location": "L55",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "biomass_to_syngas_properties_gasmixture_enthalpy",
+      "target": "biomass_to_syngas_properties_gasmixture_prop",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "biomass_to_syngas/properties.py",
+      "source_location": "L58",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "biomass_to_syngas_properties_gasmixture_viscosity",
+      "target": "biomass_to_syngas_properties_gasmixture_prop",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "biomass_to_syngas/properties.py",
+      "source_location": "L61",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "biomass_to_syngas_properties_gasmixture_thermal_conductivity",
+      "target": "biomass_to_syngas_properties_gasmixture_prop",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "biomass_to_syngas/properties.py",
+      "source_location": "L64",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "biomass_to_syngas_properties_gasmixture_specific_heat",
+      "target": "biomass_to_syngas_properties_gasmixture_prop",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "biomass_to_syngas/properties.py",
+      "source_location": "L67",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "biomass_to_syngas_properties_rationale_1",
+      "target": "biomass_to_syngas_properties",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "biomass_to_syngas/properties.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "biomass_to_syngas_properties_rationale_20",
+      "target": "biomass_to_syngas_properties_gasmixture",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "biomass_to_syngas/properties.py",
+      "source_location": "L20",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "biomass_to_syngas_properties_rationale_45",
+      "target": "biomass_to_syngas_properties_gasmixture_prop",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "biomass_to_syngas/properties.py",
+      "source_location": "L45",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "biomass_to_syngas_properties_rationale_71",
+      "target": "biomass_to_syngas_properties_pure_fluid_prop",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "biomass_to_syngas/properties.py",
+      "source_location": "L71",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "biomass_to_syngas_syngas_quality",
+      "target": "dataclasses",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "biomass_to_syngas/syngas_quality.py",
+      "source_location": "L17",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "biomass_to_syngas_syngas_quality",
+      "target": "biomass_to_syngas_syngas_quality_syngasqualityresult",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "biomass_to_syngas/syngas_quality.py",
+      "source_location": "L24",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "biomass_to_syngas_syngas_quality",
+      "target": "biomass_to_syngas_syngas_quality_evaluate_syngas_quality",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "biomass_to_syngas/syngas_quality.py",
+      "source_location": "L32",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "biomass_to_syngas_syngas_quality_evaluate_syngas_quality",
+      "target": "biomass_to_syngas_syngas_quality_syngasqualityresult",
+      "relation": "references",
+      "context": "return_type",
+      "confidence": "EXTRACTED",
+      "source_file": "biomass_to_syngas/syngas_quality.py",
+      "source_location": "L32",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "biomass_to_syngas_syngas_quality_evaluate_syngas_quality",
+      "target": "biomass_to_syngas_syngas_quality_syngasqualityresult",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "biomass_to_syngas/syngas_quality.py",
+      "source_location": "L78",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "biomass_to_syngas_syngas_quality_rationale_1",
+      "target": "biomass_to_syngas_syngas_quality",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "biomass_to_syngas/syngas_quality.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "biomass_to_syngas_syngas_quality_rationale_33",
+      "target": "biomass_to_syngas_syngas_quality_evaluate_syngas_quality",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "biomass_to_syngas/syngas_quality.py",
+      "source_location": "L33",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "examples_full_chain_worked_example",
+      "target": "biomass_to_syngas_biomass_feedstock",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "examples/full_chain_worked_example.py",
+      "source_location": "L20",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "examples_full_chain_worked_example",
+      "target": "biomass_to_syngas_gas_cleanup",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "examples/full_chain_worked_example.py",
+      "source_location": "L21",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "examples_full_chain_worked_example",
+      "target": "biomass_to_syngas_gasifier",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "examples/full_chain_worked_example.py",
+      "source_location": "L22",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "examples_full_chain_worked_example",
+      "target": "biomass_to_syngas_syngas_quality",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "examples/full_chain_worked_example.py",
+      "source_location": "L23",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "examples_full_chain_worked_example_rationale_1",
+      "target": "examples_full_chain_worked_example",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "examples/full_chain_worked_example.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "pkg_biomass_to_syngas_opensource",
+      "target": "pkg_coolprop",
+      "relation": "depends_on",
+      "context": "dependency",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "pyproject.toml",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "pkg_biomass_to_syngas_opensource",
+      "target": "pkg_scipy",
+      "relation": "depends_on",
+      "context": "dependency",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "pyproject.toml",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "pkg_biomass_to_syngas_opensource",
+      "target": "pkg_numpy",
+      "relation": "depends_on",
+      "context": "dependency",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "pyproject.toml",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "pkg_biomass_to_syngas_opensource",
+      "target": "pkg_streamlit",
+      "relation": "depends_on",
+      "context": "dependency",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "pyproject.toml",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "pkg_biomass_to_syngas_opensource",
+      "target": "pkg_pandas",
+      "relation": "depends_on",
+      "context": "dependency",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "pyproject.toml",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "streamlit_app",
+      "target": "streamlit",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "streamlit_app.py",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "streamlit_app",
+      "target": "biomass_to_syngas_biomass_feedstock",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "streamlit_app.py",
+      "source_location": "L9",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "streamlit_app",
+      "target": "biomass_to_syngas_gas_cleanup",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "streamlit_app.py",
+      "source_location": "L10",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "streamlit_app",
+      "target": "biomass_to_syngas_gasifier",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "streamlit_app.py",
+      "source_location": "L11",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "streamlit_app",
+      "target": "biomass_to_syngas_syngas_quality",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "streamlit_app.py",
+      "source_location": "L12",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "streamlit_app_rationale_1",
+      "target": "streamlit_app",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "streamlit_app.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "tests_test_biomass_feedstock",
+      "target": "pytest",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_biomass_feedstock.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "tests_test_biomass_feedstock",
+      "target": "biomass_to_syngas_biomass_feedstock",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_biomass_feedstock.py",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "tests_test_biomass_feedstock",
+      "target": "tests_test_biomass_feedstock_test_biomass_analysis_rejects_fractions_not_summing_to_one",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_biomass_feedstock.py",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "tests_test_biomass_feedstock",
+      "target": "tests_test_biomass_feedstock_test_hhv_in_plausible_published_range",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_biomass_feedstock.py",
+      "source_location": "L11",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "tests_test_biomass_feedstock",
+      "target": "tests_test_biomass_feedstock_test_lhv_less_than_hhv",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_biomass_feedstock.py",
+      "source_location": "L19",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "tests_test_biomass_feedstock",
+      "target": "tests_test_biomass_feedstock_test_higher_moisture_widens_hhv_lhv_gap",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_biomass_feedstock.py",
+      "source_location": "L24",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "tests_test_gas_cleanup",
+      "target": "pytest",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_gas_cleanup.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "tests_test_gas_cleanup",
+      "target": "biomass_to_syngas_gas_cleanup",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_gas_cleanup.py",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "tests_test_gas_cleanup",
+      "target": "tests_test_gas_cleanup_test_clean_syngas_mass_balance_closes",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_gas_cleanup.py",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "tests_test_gas_cleanup",
+      "target": "tests_test_gas_cleanup_test_clean_syngas_higher_removal_fraction_leaves_less_behind",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_gas_cleanup.py",
+      "source_location": "L13",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "tests_test_gas_cleanup",
+      "target": "tests_test_gas_cleanup_test_clean_syngas_rejects_invalid_fraction",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_gas_cleanup.py",
+      "source_location": "L20",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "tests_test_gasifier",
+      "target": "pytest",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_gasifier.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "tests_test_gasifier",
+      "target": "biomass_to_syngas_biomass_feedstock",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_gasifier.py",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "tests_test_gasifier",
+      "target": "biomass_to_syngas_gasifier",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_gasifier.py",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "tests_test_gasifier",
+      "target": "tests_test_gasifier_test_gasify_biomass_mass_and_mole_balance_closes",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_gasifier.py",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "tests_test_gasifier",
+      "target": "tests_test_gasifier_test_gasify_biomass_cold_gas_efficiency_in_published_range",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_gasifier.py",
+      "source_location": "L17",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "tests_test_gasifier",
+      "target": "tests_test_gasifier_test_gasify_biomass_rejects_unknown_gasifier_type",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_gasifier.py",
+      "source_location": "L25",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "tests_test_gasifier",
+      "target": "tests_test_gasifier_test_gasify_biomass_tar_yield_matches_gasifier_type_ordering",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_gasifier.py",
+      "source_location": "L30",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "tests_test_gasifier",
+      "target": "tests_test_gasifier_test_gasify_biomass_rejects_invalid_carbon_conversion",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_gasifier.py",
+      "source_location": "L39",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "tests_test_gasifier",
+      "target": "tests_test_gasifier_test_gasify_biomass_higher_o2_ratio_lowers_cold_gas_efficiency",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_gasifier.py",
+      "source_location": "L44",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "tests_test_syngas_quality",
+      "target": "pytest",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_syngas_quality.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "tests_test_syngas_quality",
+      "target": "biomass_to_syngas_syngas_quality",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_syngas_quality.py",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "tests_test_syngas_quality",
+      "target": "tests_test_syngas_quality_test_evaluate_syngas_quality_rejects_zero_co",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_syngas_quality.py",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "tests_test_syngas_quality",
+      "target": "tests_test_syngas_quality_test_evaluate_syngas_quality_ft_ratio_recommends_ft_methanol",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_syngas_quality.py",
+      "source_location": "L11",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "tests_test_syngas_quality",
+      "target": "tests_test_syngas_quality_test_evaluate_syngas_quality_co_rich_recommends_shift",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_syngas_quality.py",
+      "source_location": "L17",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "tests_test_syngas_quality",
+      "target": "tests_test_syngas_quality_test_evaluate_syngas_quality_high_inert_content_recommends_power_only",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_syngas_quality.py",
+      "source_location": "L23",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "tests_test_syngas_quality",
+      "target": "tests_test_syngas_quality_test_evaluate_syngas_quality_lhv_positive",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_syngas_quality.py",
+      "source_location": "L29",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "readme",
+      "target": "readme_biomass_to_syngas_opensource",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "readme_biomass_to_syngas_opensource",
+      "target": "readme_quick_start",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L24",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "readme_biomass_to_syngas_opensource",
+      "target": "readme_modules",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L34",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "readme_biomass_to_syngas_opensource",
+      "target": "readme_related_open_source_work",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L43",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "readme_biomass_to_syngas_opensource",
+      "target": "readme_disclaimer",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L53",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "docs_methodology",
+      "target": "docs_methodology_methodology",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/METHODOLOGY.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "docs_methodology_methodology",
+      "target": "docs_methodology_feedstock_characterization_biomass_feedstock_py",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/METHODOLOGY.md",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "docs_methodology_methodology",
+      "target": "docs_methodology_gasifier_gasifier_py",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/METHODOLOGY.md",
+      "source_location": "L15",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "docs_methodology_methodology",
+      "target": "docs_methodology_gas_cleanup_gas_cleanup_py",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/METHODOLOGY.md",
+      "source_location": "L26",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "docs_methodology_methodology",
+      "target": "docs_methodology_syngas_quality_syngas_quality_py",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/METHODOLOGY.md",
+      "source_location": "L32",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "docs_validation",
+      "target": "docs_validation_external_validation",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/VALIDATION.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "docs_validation_external_validation",
+      "target": "docs_validation_real_world_motivation_and_public_source",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/VALIDATION.md",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "docs_validation_external_validation",
+      "target": "docs_validation_feedstock_hhv_matches_published_ranges",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/VALIDATION.md",
+      "source_location": "L26",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "docs_validation_external_validation",
+      "target": "docs_validation_full_chain_worked_example_a_real_scale_up_finding_and_a_units_bug_caught_before_shipping",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/VALIDATION.md",
+      "source_location": "L35",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "docs_validation_external_validation",
+      "target": "docs_validation_what_was_deliberately_not_modeled_in_this_first_pass",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/VALIDATION.md",
+      "source_location": "L53",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "biomass_to_syngas_gasifier",
+      "target": "biomass_to_syngas_biomass_feedstock_biomassanalysis",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "biomass_to_syngas/gasifier.py",
+      "source_location": "L36",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "examples_full_chain_worked_example",
+      "target": "biomass_to_syngas_gas_cleanup_clean_syngas",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "examples/full_chain_worked_example.py",
+      "source_location": "L21",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "examples_full_chain_worked_example",
+      "target": "biomass_to_syngas_gasifier_gasify_biomass",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "examples/full_chain_worked_example.py",
+      "source_location": "L22",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "examples_full_chain_worked_example",
+      "target": "biomass_to_syngas_syngas_quality_evaluate_syngas_quality",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "examples/full_chain_worked_example.py",
+      "source_location": "L23",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "streamlit_app",
+      "target": "biomass_to_syngas_biomass_feedstock_biomassanalysis",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "streamlit_app.py",
+      "source_location": "L9",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "streamlit_app",
+      "target": "biomass_to_syngas_gas_cleanup_clean_syngas",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "streamlit_app.py",
+      "source_location": "L10",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "streamlit_app",
+      "target": "biomass_to_syngas_gasifier_gasify_biomass",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "streamlit_app.py",
+      "source_location": "L11",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "streamlit_app",
+      "target": "biomass_to_syngas_syngas_quality_evaluate_syngas_quality",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "streamlit_app.py",
+      "source_location": "L12",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "tests_test_biomass_feedstock",
+      "target": "biomass_to_syngas_biomass_feedstock_biomassanalysis",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_biomass_feedstock.py",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "tests_test_gas_cleanup",
+      "target": "biomass_to_syngas_gas_cleanup_clean_syngas",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_gas_cleanup.py",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "tests_test_gasifier",
+      "target": "biomass_to_syngas_gasifier_gasify_biomass",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_gasifier.py",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "tests_test_syngas_quality",
+      "target": "biomass_to_syngas_syngas_quality_evaluate_syngas_quality",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_syngas_quality.py",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "tests_test_biomass_feedstock_test_biomass_analysis_rejects_fractions_not_summing_to_one",
+      "target": "biomass_to_syngas_biomass_feedstock_biomassanalysis",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_biomass_feedstock.py",
+      "source_location": "L8",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "tests_test_biomass_feedstock_test_higher_moisture_widens_hhv_lhv_gap",
+      "target": "biomass_to_syngas_biomass_feedstock_biomassanalysis",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_biomass_feedstock.py",
+      "source_location": "L25",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "tests_test_gas_cleanup_test_clean_syngas_mass_balance_closes",
+      "target": "biomass_to_syngas_gas_cleanup_clean_syngas",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_gas_cleanup.py",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "tests_test_gas_cleanup_test_clean_syngas_higher_removal_fraction_leaves_less_behind",
+      "target": "biomass_to_syngas_gas_cleanup_clean_syngas",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_gas_cleanup.py",
+      "source_location": "L14",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "tests_test_gas_cleanup_test_clean_syngas_rejects_invalid_fraction",
+      "target": "biomass_to_syngas_gas_cleanup_clean_syngas",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_gas_cleanup.py",
+      "source_location": "L22",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "tests_test_gasifier_test_gasify_biomass_mass_and_mole_balance_closes",
+      "target": "biomass_to_syngas_gasifier_gasify_biomass",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_gasifier.py",
+      "source_location": "L8",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "tests_test_gasifier_test_gasify_biomass_cold_gas_efficiency_in_published_range",
+      "target": "biomass_to_syngas_gasifier_gasify_biomass",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_gasifier.py",
+      "source_location": "L20",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "tests_test_gasifier_test_gasify_biomass_rejects_unknown_gasifier_type",
+      "target": "biomass_to_syngas_gasifier_gasify_biomass",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_gasifier.py",
+      "source_location": "L27",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "tests_test_gasifier_test_gasify_biomass_tar_yield_matches_gasifier_type_ordering",
+      "target": "biomass_to_syngas_gasifier_gasify_biomass",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_gasifier.py",
+      "source_location": "L34",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "tests_test_gasifier_test_gasify_biomass_rejects_invalid_carbon_conversion",
+      "target": "biomass_to_syngas_gasifier_gasify_biomass",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_gasifier.py",
+      "source_location": "L41",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "tests_test_gasifier_test_gasify_biomass_higher_o2_ratio_lowers_cold_gas_efficiency",
+      "target": "biomass_to_syngas_gasifier_gasify_biomass",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_gasifier.py",
+      "source_location": "L47",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "tests_test_syngas_quality_test_evaluate_syngas_quality_rejects_zero_co",
+      "target": "biomass_to_syngas_syngas_quality_evaluate_syngas_quality",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_syngas_quality.py",
+      "source_location": "L8",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "tests_test_syngas_quality_test_evaluate_syngas_quality_ft_ratio_recommends_ft_methanol",
+      "target": "biomass_to_syngas_syngas_quality_evaluate_syngas_quality",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_syngas_quality.py",
+      "source_location": "L12",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "tests_test_syngas_quality_test_evaluate_syngas_quality_co_rich_recommends_shift",
+      "target": "biomass_to_syngas_syngas_quality_evaluate_syngas_quality",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_syngas_quality.py",
+      "source_location": "L18",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "tests_test_syngas_quality_test_evaluate_syngas_quality_high_inert_content_recommends_power_only",
+      "target": "biomass_to_syngas_syngas_quality_evaluate_syngas_quality",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_syngas_quality.py",
+      "source_location": "L24",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "tests_test_syngas_quality_test_evaluate_syngas_quality_lhv_positive",
+      "target": "biomass_to_syngas_syngas_quality_evaluate_syngas_quality",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_syngas_quality.py",
+      "source_location": "L30",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "biomass_to_syngas_gasifier_gasify_biomass",
+      "target": "biomass_to_syngas_biomass_feedstock_biomassanalysis",
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "biomass_to_syngas/gasifier.py",
+      "source_location": "L72",
+      "weight": 0.8,
+      "_origin": "ast"
+    },
+    {
+      "source": "tests_test_biomass_feedstock_test_biomass_analysis_rejects_fractions_not_summing_to_one",
+      "target": "biomass_to_syngas_biomass_feedstock_biomassanalysis",
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "tests/test_biomass_feedstock.py",
+      "source_location": "L8",
+      "weight": 0.8,
+      "_origin": "ast"
+    },
+    {
+      "source": "tests_test_biomass_feedstock_test_higher_moisture_widens_hhv_lhv_gap",
+      "target": "biomass_to_syngas_biomass_feedstock_biomassanalysis",
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "tests/test_biomass_feedstock.py",
+      "source_location": "L25",
+      "weight": 0.8,
+      "_origin": "ast"
+    }
+  ],
+  "directed": false
+}

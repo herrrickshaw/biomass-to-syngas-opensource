@@ -1,0 +1,104 @@
+{
+  "biomass_to_syngas/__init__.py": {
+    "mtime": 1789388731.095726,
+    "seen": 1789968631.2475321,
+    "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
+    "semantic_hash": ""
+  },
+  "biomass_to_syngas/biomass_feedstock.py": {
+    "mtime": 1789388864.155558,
+    "seen": 1789968631.247545,
+    "ast_hash": "9b498262dc067d09aee38df21b540e84",
+    "semantic_hash": ""
+  },
+  "biomass_to_syngas/gas_cleanup.py": {
+    "mtime": 1789388991.823536,
+    "seen": 1789968631.247552,
+    "ast_hash": "36982a7365e6918894f58674c154a175",
+    "semantic_hash": ""
+  },
+  "biomass_to_syngas/gasifier.py": {
+    "mtime": 1789388904.2547,
+    "seen": 1789968631.2475579,
+    "ast_hash": "03862b262310b2787184fafc7e26d694",
+    "semantic_hash": ""
+  },
+  "biomass_to_syngas/properties.py": {
+    "mtime": 1789388731.066961,
+    "seen": 1789968631.2475631,
+    "ast_hash": "f7b8a9a23b929d86df1bd205950da471",
+    "semantic_hash": ""
+  },
+  "biomass_to_syngas/syngas_quality.py": {
+    "mtime": 1789389008.867765,
+    "seen": 1789968631.247568,
+    "ast_hash": "3d0528b54a51ee623110f476bb913876",
+    "semantic_hash": ""
+  },
+  "examples/full_chain_worked_example.py": {
+    "mtime": 1789389105.20212,
+    "seen": 1789968631.247573,
+    "ast_hash": "874c9b48a3ab16ec3b76b68400fda716",
+    "semantic_hash": ""
+  },
+  "pyproject.toml": {
+    "mtime": 1789388740.898279,
+    "seen": 1789968631.2475781,
+    "ast_hash": "a5bda9ee1f082005ca12fa1051fdf156",
+    "semantic_hash": ""
+  },
+  "streamlit_app.py": {
+    "mtime": 1789389142.012454,
+    "seen": 1789968631.247582,
+    "ast_hash": "8e9502928d1d52b87718df5778454dda",
+    "semantic_hash": ""
+  },
+  "tests/test_biomass_feedstock.py": {
+    "mtime": 1789388929.465371,
+    "seen": 1789968631.247587,
+    "ast_hash": "3164a78fd0e440057bac4f51d3aa4f39",
+    "semantic_hash": ""
+  },
+  "tests/test_gas_cleanup.py": {
+    "mtime": 1789389019.290439,
+    "seen": 1789968631.247592,
+    "ast_hash": "3f6633c4c62cd2f3594f72ab0f96e087",
+    "semantic_hash": ""
+  },
+  "tests/test_gasifier.py": {
+    "mtime": 1789388941.174956,
+    "seen": 1789968631.247597,
+    "ast_hash": "98d824608b451df7bf57b96356e2d0ad",
+    "semantic_hash": ""
+  },
+  "tests/test_syngas_quality.py": {
+    "mtime": 1789389034.893896,
+    "seen": 1789968631.247602,
+    "ast_hash": "44f10c7d678b69a10240f7e981b5bd2a",
+    "semantic_hash": ""
+  },
+  ".github/workflows/tests.yml": {
+    "mtime": 1789388747.174713,
+    "seen": 1789968631.247606,
+    "ast_hash": "176704eb46db27f6260006d1973b0bea",
+    "semantic_hash": ""
+  },
+  "README.md": {
+    "mtime": 1789389159.089036,
+    "seen": 1789968631.2476108,
+    "ast_hash": "23b6c02dff3da9c2026cd82a6e4a1e30",
+    "semantic_hash": ""
+  },
+  "docs/METHODOLOGY.md": {
+    "mtime": 1789389166.773268,
+    "seen": 1789968631.2476149,
+    "ast_hash": "08b7c0fc6d69a6871aa6fb0312e22d5d",
+    "semantic_hash": ""
+  },
+  "docs/VALIDATION.md": {
+    "mtime": 1789389183.01968,
+    "seen": 1789968631.24762,
+    "ast_hash": "d740f349ce5e46065d82dfbc3403d013",
+    "semantic_hash": ""
+  }
+}
