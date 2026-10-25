@@ -29,3 +29,17 @@ def test_evaluate_syngas_quality_high_inert_content_recommends_power_only():
 def test_evaluate_syngas_quality_lhv_positive():
     result = evaluate_syngas_quality({"Hydrogen": 0.30, "CarbonMonoxide": 0.30, "CarbonDioxide": 0.10, "Water": 0.05})
     assert result.lhv_MJ_per_Nm3 > 0
+
+
+def test_lhv_of_pure_hydrogen_and_pure_co_per_nm3():
+    # H2: 241.8 kJ/mol / 0.022414 m3/mol = 10.79 MJ/Nm3; CO: 283.0/0.022414 = 12.63 MJ/Nm3
+    h2_like = evaluate_syngas_quality({"Hydrogen": 1 - 1e-12, "CarbonMonoxide": 1e-12})
+    assert h2_like.lhv_MJ_per_Nm3 == pytest.approx(10.788, abs=1e-3)
+    assert evaluate_syngas_quality({"CarbonMonoxide": 1.0}).lhv_MJ_per_Nm3 == pytest.approx(12.626, abs=1e-3)
+
+
+@pytest.mark.parametrize("h2,co,expected", [(0.34, 0.20, "Fischer-Tropsch"),     # 1.70 boundary
+                                            (0.46, 0.20, "Fischer-Tropsch"),     # 2.30 boundary
+                                            (0.50, 0.20, "H2-rich")])
+def test_h2_co_ratio_band_edges(h2, co, expected):
+    assert evaluate_syngas_quality({"Hydrogen": h2, "CarbonMonoxide": co}).recommended_use.startswith(expected)
