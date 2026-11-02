@@ -16,12 +16,20 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 
-_HHV_KJ_MOL = {"CarbonMonoxide": 283.0, "Hydrogen": 285.8}
-_LHV_KJ_MOL = {"CarbonMonoxide": 283.0, "Hydrogen": 241.8}  # CO's LHV=HHV (no H2O product)
+from .constants import LHV_KJ_MOL as _LHV_KJ_MOL  # CO's LHV=HHV (no H2O product)
+from .constants import NM3_PER_MOL_STP
+
+# H2:CO window treated as "close to 2:1" for FT/methanol synthesis feed.
+FT_H2_CO_MIN = 1.7
+FT_H2_CO_MAX = 2.3
+# Above this inert (N2/CO2/H2O) mole fraction, chemical synthesis is ruled out.
+MAX_INERT_FRACTION_FOR_SYNTHESIS = 0.50
 
 
 @dataclass
 class SyngasQualityResult:
+    """h2_to_co: mol/mol; LHV: MJ/Nm3 (0 C, 1 atm); inerts: mole fraction."""
+
     h2_to_co_molar_ratio: float
     lhv_MJ_per_Nm3: float
     inert_mole_fraction: float
@@ -41,26 +49,26 @@ def evaluate_syngas_quality(composition_mole_frac: dict[str, float]) -> SyngasQu
     h2_to_co = h2 / co
 
     lhv_kJ_mol = sum(composition_mole_frac.get(name, 0.0) * _LHV_KJ_MOL[name] for name in _LHV_KJ_MOL)
-    lhv_MJ_Nm3 = lhv_kJ_mol / 0.022414 / 1000.0  # kJ/mol -> kJ/Nm3 -> MJ/Nm3
+    lhv_MJ_Nm3 = lhv_kJ_mol / NM3_PER_MOL_STP / 1000.0  # kJ/mol -> kJ/Nm3 -> MJ/Nm3
 
     inert_names = {"Nitrogen", "CarbonDioxide", "Water", "HydrogenSulfide"}
     inert_frac = sum(v for k, v in composition_mole_frac.items() if k in inert_names)
 
-    if inert_frac > 0.50:
+    if inert_frac > MAX_INERT_FRACTION_FOR_SYNTHESIS:
         recommended = "Direct combustion / gas engine power generation only"
         rationale = (
             f"Inert (N2/CO2/H2O) content {inert_frac*100:.0f}% is too high for chemical "
             "synthesis feed quality - typical of air-blown or heavily steam-diluted gasification. "
             "Power generation via gas engine/turbine is far more tolerant of dilution."
         )
-    elif 1.7 <= h2_to_co <= 2.3:
+    elif FT_H2_CO_MIN <= h2_to_co <= FT_H2_CO_MAX:
         recommended = "Fischer-Tropsch / methanol synthesis feed"
         rationale = (
             f"H2:CO ratio {h2_to_co:.2f}:1 sits close to the 2:1 stoichiometric ratio both "
             "Fischer-Tropsch and methanol synthesis consume - a good match without a large "
             "additional water-gas-shift adjustment step."
         )
-    elif h2_to_co < 1.7:
+    elif h2_to_co < FT_H2_CO_MIN:
         recommended = "Water-gas-shift adjustment needed before FT/methanol synthesis"
         rationale = (
             f"H2:CO ratio {h2_to_co:.2f}:1 is CO-rich relative to the 2:1 target - a WGS stage "

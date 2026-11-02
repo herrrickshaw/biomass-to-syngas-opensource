@@ -33,10 +33,36 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 
+from .constants import KG_H2O_PER_KG_H2, LATENT_HEAT_WATER_MJ_KG
+
+# Channiwala & Parikh (2002) coefficients, MJ/kg per mass-percent of
+# each constituent. Do not round or reorder - see module docstring.
+CHANNIWALA_PARIKH_COEFF_MJ_KG_PER_PCT: dict[str, float] = {
+    "C": 0.3491,
+    "H": 1.1783,
+    "S": 0.1005,
+    "O": -0.1034,
+    "N": -0.0151,
+    "Ash": -0.0211,
+}
+
+# Tolerance on the mass-fraction closure check (fractions are typed by
+# hand to 3 decimals, so anything tighter than this is noise).
+MASS_FRACTION_SUM_TOLERANCE = 1e-6
+
+
+def _as_percent(mass_fraction: float) -> float:
+    """Mass fraction (0-1) -> mass percent (0-100)."""
+    return mass_fraction * 100.0
+
 
 @dataclass
 class BiomassAnalysis:
-    """As-received ultimate analysis, mass fractions summing to 1.0."""
+    """As-received ultimate analysis, mass fractions summing to 1.0.
+
+    All seven fields are kg/kg of as-received fuel (dimensionless).
+    """
+
     carbon: float
     hydrogen: float
     oxygen: float
@@ -46,31 +72,40 @@ class BiomassAnalysis:
     moisture: float
 
     def __post_init__(self) -> None:
-        total = self.carbon + self.hydrogen + self.oxygen + self.nitrogen + self.sulfur + self.ash + self.moisture
-        if abs(total - 1.0) > 1e-6:
+        total = (
+            self.carbon + self.hydrogen + self.oxygen + self.nitrogen
+            + self.sulfur + self.ash + self.moisture
+        )
+        if abs(total - 1.0) > MASS_FRACTION_SUM_TOLERANCE:
             raise ValueError(f"Ultimate analysis mass fractions must sum to 1.0, got {total:.4f}")
 
     def hhv_MJ_kg(self) -> float:
-        """Channiwala & Parikh (2002) unified correlation - see module
-        docstring. Mass fractions here are on an as-received (not dry)
-        basis, a common simplified application of this correlation for
-        conceptual-level work (the original correlation is defined on a
-        dry basis); moisture's own effect on usable (lower) heating
-        value is captured separately - see lhv_MJ_kg."""
-        pct = lambda x: x * 100.0
+        """Higher heating value, MJ/kg - Channiwala & Parikh (2002)
+        unified correlation, see module docstring. Mass fractions here
+        are on an as-received (not dry) basis, a common simplified
+        application of this correlation for conceptual-level work (the
+        original correlation is defined on a dry basis); moisture's own
+        effect on usable (lower) heating value is captured separately -
+        see lhv_MJ_kg."""
+        c = CHANNIWALA_PARIKH_COEFF_MJ_KG_PER_PCT
         return (
-            0.3491 * pct(self.carbon) + 1.1783 * pct(self.hydrogen) + 0.1005 * pct(self.sulfur)
-            - 0.1034 * pct(self.oxygen) - 0.0151 * pct(self.nitrogen) - 0.0211 * pct(self.ash)
+            c["C"] * _as_percent(self.carbon)
+            + c["H"] * _as_percent(self.hydrogen)
+            + c["S"] * _as_percent(self.sulfur)
+            + c["O"] * _as_percent(self.oxygen)
+            + c["N"] * _as_percent(self.nitrogen)
+            + c["Ash"] * _as_percent(self.ash)
         )
 
     def lhv_MJ_kg(self) -> float:
-        """LHV = HHV minus the latent heat of the water formed from fuel
-        hydrogen AND the free moisture already present - standard
-        correction (e.g. Basu, "Biomass Gasification and Pyrolysis"),
-        using water's latent heat of vaporization at standard conditions,
-        2.442 MJ/kg."""
-        water_from_h2_combustion = 8.936 * self.hydrogen  # kg H2O per kg fuel, stoichiometric H->H2O
-        return self.hhv_MJ_kg() - 2.442 * (water_from_h2_combustion + self.moisture)
+        """Lower heating value, MJ/kg = HHV minus the latent heat of the
+        water formed from fuel hydrogen AND the free moisture already
+        present - standard correction (e.g. Basu, "Biomass Gasification
+        and Pyrolysis"), using water's latent heat of vaporization at
+        standard conditions, 2.442 MJ/kg."""
+        # kg H2O per kg fuel, stoichiometric H -> H2O
+        water_from_h2_combustion = KG_H2O_PER_KG_H2 * self.hydrogen
+        return self.hhv_MJ_kg() - LATENT_HEAT_WATER_MJ_KG * (water_from_h2_combustion + self.moisture)
 
 
 # Illustrative presets (not a claim about any specific batch/source).
