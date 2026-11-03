@@ -22,9 +22,15 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 
+# Defaults: see module docstring for the literature support.
+DEFAULT_TAR_REMOVAL_FRACTION = 0.97
+DEFAULT_PARTICULATE_REMOVAL_FRACTION = 0.98
+
 
 @dataclass
 class CleanupResult:
+    """Mass flows in kg/s; removal fractions dimensionless (0-1)."""
+
     cleaned_tar_mass_flow_kg_s: float
     captured_tar_mass_flow_kg_s: float
     tar_removal_fraction: float
@@ -36,8 +42,8 @@ class CleanupResult:
 def clean_syngas(
     tar_mass_flow_kg_s: float,
     particulate_mass_flow_kg_s: float,
-    tar_removal_fraction: float = 0.97,
-    particulate_removal_fraction: float = 0.98,
+    tar_removal_fraction: float = DEFAULT_TAR_REMOVAL_FRACTION,
+    particulate_removal_fraction: float = DEFAULT_PARTICULATE_REMOVAL_FRACTION,
 ) -> CleanupResult:
     """Mass-balance tar/particulate removal. tar_mass_flow_kg_s and
     particulate_mass_flow_kg_s are typically taken from

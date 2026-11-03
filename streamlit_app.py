@@ -6,7 +6,7 @@ from __future__ import annotations
 
 import streamlit as st
 
-from biomass_to_syngas.biomass_feedstock import TYPICAL_RICE_STRAW, TYPICAL_WOOD_CHIPS, BiomassAnalysis
+from biomass_to_syngas.biomass_feedstock import TYPICAL_RICE_STRAW, TYPICAL_WOOD_CHIPS
 from biomass_to_syngas.gas_cleanup import clean_syngas
 from biomass_to_syngas.gasifier import TYPICAL_TAR_YIELD_G_NM3, gasify_biomass
 from biomass_to_syngas.syngas_quality import evaluate_syngas_quality
