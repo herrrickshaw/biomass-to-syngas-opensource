@@ -35,18 +35,36 @@ bracketing the same default, not one source re-quoted.
 """
 from __future__ import annotations
 
+import logging
 import math
 from dataclasses import dataclass
 
 from scipy.optimize import brentq
 
 from .biomass_feedstock import BiomassAnalysis
+from .constants import (
+    ATOMIC_WEIGHT_G_MOL as _AW,
+)
+from .constants import (
+    HHV_KJ_MOL,
+    MOLECULAR_WEIGHT_G_MOL,
+    NM3_PER_MOL_STP,
+)
+from .constants import (
+    MW_H2O_G_MOL as _MW_H2O,
+)
+from .constants import (
+    MW_O2_G_MOL as _MW_O2,
+)
 
-_AW = {"C": 12.011, "H": 1.008, "O": 15.999, "N": 14.007, "S": 32.06}
-_MW_H2O = 18.015
-_MW_O2 = 31.998
+logger = logging.getLogger(__name__)
 
-_HHV_KJ_MOL = {"H2": 285.8, "CO": 283.0}
+# Default fraction of fuel carbon converted to gas (kg C converted / kg C fed).
+DEFAULT_CARBON_CONVERSION = 0.90
+# Van't Hoff-type fit for the water-gas-shift equilibrium constant,
+# K = exp(4577.8/T - 4.33), T in K (same fit as the sibling coal-to-urea repo).
+_WGS_K_A_KELVIN = 4577.8
+_WGS_K_B = 4.33
 
 # Typical tar yields by gasifier technology, g per Nm3 of dry product
 # gas (Milne, Evans & Abatzoglou, NREL/TP-570-25357, 1998) - illustrative
@@ -60,6 +78,9 @@ TYPICAL_TAR_YIELD_G_NM3 = {
 
 @dataclass
 class GasifierResult:
+    """Gasifier outputs. Flows in mol/s or kg/s; efficiency and conversion
+    are dimensionless; composition is wet mole fraction."""
+
     syngas_composition_mole_frac: dict[str, float]
     syngas_molar_flow_mol_s: float
     syngas_mass_flow_kg_s: float
@@ -72,7 +93,8 @@ class GasifierResult:
 
 
 def _wgs_equilibrium_K(T_K: float) -> float:
-    return math.exp(4577.8 / T_K - 4.33)
+    """Water-gas-shift equilibrium constant (dimensionless) at T_K [K]."""
+    return math.exp(_WGS_K_A_KELVIN / T_K - _WGS_K_B)
 
 
 def gasify_biomass(
@@ -81,7 +103,7 @@ def gasify_biomass(
     o2_to_biomass_mass_ratio: float,
     steam_to_biomass_mass_ratio: float,
     gasifier_T_K: float,
-    carbon_conversion: float = 0.90,
+    carbon_conversion: float = DEFAULT_CARBON_CONVERSION,
     gasifier_type: str = "fluidized_bed",
 ) -> GasifierResult:
     """Elemental balance + WGS-equilibrium quench, same structure as the
@@ -154,17 +176,18 @@ def gasify_biomass(
     total_mol = sum(species.values())
     composition = {k: v / total_mol for k, v in species.items()}
 
-    hhv_syngas_kW = n_CO * _HHV_KJ_MOL["CO"] + n_H2 * _HHV_KJ_MOL["H2"]
+    hhv_syngas_kW = n_CO * HHV_KJ_MOL["CarbonMonoxide"] + n_H2 * HHV_KJ_MOL["Hydrogen"]
     hhv_biomass_kW = biomass_mass_flow_kg_s * biomass.hhv_MJ_kg() * 1000.0
     cold_gas_efficiency = hhv_syngas_kW / hhv_biomass_kW if hhv_biomass_kW > 0 else 0.0
 
     mw_mix = sum(composition[k] * _species_mw(k) for k in composition)
     syngas_mass_flow = total_mol * mw_mix / 1000.0
 
-    Nm3_s = total_mol * 0.022414
+    Nm3_s = total_mol * NM3_PER_MOL_STP
     tar_yield_g_nm3 = TYPICAL_TAR_YIELD_G_NM3[gasifier_type]
     tar_mass_flow_kg_s = Nm3_s * tar_yield_g_nm3 / 1000.0
 
+    logger.debug("gasify_biomass: %s, T=%.1f K, CGE=%.3f", gasifier_type, gasifier_T_K, cold_gas_efficiency)
     return GasifierResult(
         syngas_composition_mole_frac=composition,
         syngas_molar_flow_mol_s=total_mol,
@@ -179,7 +202,5 @@ def gasify_biomass(
 
 
 def _species_mw(coolprop_name: str) -> float:
-    return {
-        "CarbonMonoxide": 28.01, "CarbonDioxide": 44.01, "Hydrogen": 2.016,
-        "Water": 18.015, "Nitrogen": 28.014,
-    }[coolprop_name]
+    """Molecular weight, g/mol, of a syngas species keyed by CoolProp name."""
+    return MOLECULAR_WEIGHT_G_MOL[coolprop_name]

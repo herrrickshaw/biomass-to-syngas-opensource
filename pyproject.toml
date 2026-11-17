@@ -7,7 +7,7 @@ name = "biomass-to-syngas-opensource"
 version = "0.1.0"
 description = "Open-source conceptual sizing tools for biomass gasification to syngas (feedstock characterization, gasifier, tar/particulate cleanup, syngas quality screening)"
 readme = "README.md"
-requires-python = ">=3.10"
+requires-python = ">=3.9"
 license = { text = "MIT" }
 dependencies = [
     "CoolProp>=6.6",
@@ -18,7 +18,20 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
-dev = ["pytest>=8.0"]
+dev = ["pytest>=8.0", "ruff>=0.4"]
 
 [tool.setuptools.packages.find]
 include = ["biomass_to_syngas*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py39"
+extend-exclude = ["graphify-out"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP"]
+# E501: long hand-typed numeric/prose lines; E741: single-letter chemistry names.
+ignore = ["E741", "E501"]
