@@ -25,3 +25,10 @@ def test_higher_moisture_widens_hhv_lhv_gap():
     dry = BiomassAnalysis(carbon=0.40, hydrogen=0.05, oxygen=0.40, nitrogen=0.01, sulfur=0.0, ash=0.14, moisture=0.0)
     wet = BiomassAnalysis(carbon=0.36, hydrogen=0.045, oxygen=0.36, nitrogen=0.009, sulfur=0.0, ash=0.126, moisture=0.10)
     assert (dry.hhv_MJ_kg() - dry.lhv_MJ_kg()) < (wet.hhv_MJ_kg() - wet.lhv_MJ_kg())
+
+
+def test_channiwala_parikh_hhv_and_lhv_hand_computed_for_wood_chips():
+    # 0.3491*48 + 1.1783*6 + 0.1005*0.1 - 0.1034*42 - 0.0151*0.3 - 0.0211*1.6 = 19.45556 MJ/kg
+    assert TYPICAL_WOOD_CHIPS.hhv_MJ_kg() == pytest.approx(19.45556, abs=1e-5)
+    # LHV = HHV - 2.442*(8.936*0.060 + 0.020) = 19.45556 - 1.35814 = 18.09742
+    assert TYPICAL_WOOD_CHIPS.lhv_MJ_kg() == pytest.approx(18.09742, abs=1e-5)

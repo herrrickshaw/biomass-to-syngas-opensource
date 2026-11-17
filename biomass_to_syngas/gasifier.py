@@ -83,6 +83,7 @@ def gasify_biomass(
     gasifier_T_K: float,
     carbon_conversion: float = 0.90,
     gasifier_type: str = "fluidized_bed",
+    tar_yield_g_per_Nm3: float | None = None,
 ) -> GasifierResult:
     """Elemental balance + WGS-equilibrium quench, same structure as the
     coal-to-urea repo's gasify_coal - see that module's docstring for
@@ -161,9 +162,10 @@ def gasify_biomass(
     mw_mix = sum(composition[k] * _species_mw(k) for k in composition)
     syngas_mass_flow = total_mol * mw_mix / 1000.0
 
-    Nm3_s = total_mol * 0.022414
-    tar_yield_g_nm3 = TYPICAL_TAR_YIELD_G_NM3[gasifier_type]
-    tar_mass_flow_kg_s = Nm3_s * tar_yield_g_nm3 / 1000.0
+    # Tar yields (Milne et al.) are per Nm3 of DRY product gas.
+    dry_Nm3_s = (total_mol - n_H2O) * 0.022414
+    tar_yield_g_nm3 = TYPICAL_TAR_YIELD_G_NM3[gasifier_type] if tar_yield_g_per_Nm3 is None else tar_yield_g_per_Nm3
+    tar_mass_flow_kg_s = dry_Nm3_s * tar_yield_g_nm3 / 1000.0
 
     return GasifierResult(
         syngas_composition_mole_frac=composition,
