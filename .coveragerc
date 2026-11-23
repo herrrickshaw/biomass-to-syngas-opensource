@@ -1,0 +1,9 @@
+[run]
+source = biomass_to_syngas
+omit =
+    tests/*
+    */conftest.py
+    */test_*.py
+    docs/*
+    examples/*
+    streamlit_app.py
