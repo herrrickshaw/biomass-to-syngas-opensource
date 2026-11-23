@@ -309,3 +309,19 @@ def test_gasifier_output_feeds_the_quality_screen():
     assert q.inert_mole_fraction == pytest.approx(c["Water"] + c["CarbonDioxide"] + c["Nitrogen"])
 
 
+
+
+# ------------------------------------------------- boundary / survivor tests
+
+
+def test_gas_mixture_sum_tolerance_rejects_a_1e4_error():
+    with pytest.raises(ValueError, match="sum to 1.0"):
+        P.GasMixture({"Hydrogen": 0.75, "Nitrogen": 0.2501})
+
+
+def test_pure_fluid_prop_passes_state_pairs_in_the_order_given(monkeypatch):
+    calls = []
+    monkeypatch.setattr(P.CP, "PropsSI", lambda *a: calls.append(a) or 1.0)
+    P.pure_fluid_prop("Nitrogen", "T", P=101325.0, Q=0)
+    P.pure_fluid_prop("Nitrogen", "D", Q=1, T=100.0)
+    assert calls == [("T", "P", 101325.0, "Q", 0, "Nitrogen"), ("D", "Q", 1, "T", 100.0, "Nitrogen")]
